@@ -418,6 +418,19 @@ const timeout = function (s) {
   });
 }; // https://forkify-api.herokuapp.com/v2
 ///////////////////////////////////////
+
+
+const showRecipe = async function () {
+  try {
+    const res = await fetch('https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886');
+    const data = await res.json();
+    console.log(res, data);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+showRecipe();
 },{}]},{},["d5e5671b2211724c51c4848cafccfb0a","175e469a7ea7db1c8c0744d04372621f"], null)
 
 //# sourceMappingURL=controller.8bae13a2.js.map
